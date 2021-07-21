@@ -30,7 +30,3 @@ a{
     font-size: 22pt;
     font-weight: bold;
 }
-
-li.pie{
-    list-style-image: url('../recipeImages/pie_icon.gif'); 
-}
