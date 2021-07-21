@@ -1,0 +1,16 @@
+
+.name{
+    color: blue;
+    font-style: bold;
+}
+
+.mood {
+    height: 30%;
+    width: 30%;
+    float: left;
+  }
+
+  .row:after {
+    display: table;
+    }
+
