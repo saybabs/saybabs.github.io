@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
     <title>Responsive page with bootstrap grid</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row header">Header</div>
+    <div>
+        <div class="row divHeader">
+            <span>Header</span>
+        </div>
         <div class="row menuitem">
-            <div class="col-sm-1  menu1">Menu1</div>
-            <div class="col-sm-1  menu2">Menu2</div>
-            <div class=" col-sm-1 menu3">Menu3</div>
+            <div class="col-sm-1 divMenu1">Menu1</div>
+            <div class="col-sm-1 divMenu1">Menu2</div>
+            <div class="col-sm-1 divMenu1">Menu3</div>
         </div>
-        <div class="row columns">
-            <div class="col-lg-3 column1">Column 1</div>
-            <div class="col-lg-6 column2">Column 2</div>
-            <div class="col-lg-3 column3">Column 3</div>
+        <div class="columns">
+            <div class="col-md-3 divColumn1">Column1</div>
+            <div class="col-md-6 divColumn2">Column2</div>
+            <div class="col-md-3 divColumn3">Column3</div>
         </div>
-        <div class="row footer">Footer</div>
+
+
+        <div class="row divFooter">
+            <span>Footer</span>
+        </div>
     </div>
     
+    <div>
+        <a href="https://validator.w3.org/nu/?doc=https://saybabs.github.io/lab4/responsive-bootstrap.html"> 
+            <img src="../images/tmnt-images/w3c-html.png" alt="html5 validator" width="100" height="80" />
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://saybabs.github.io/lab4/responsive-bootstrap.html"> 
+            <img src="../images/tmnt-images/w3c-css.png" alt="css validator" width="100" height="80" />
+        </a>
+    </div>
 </body>
 
 </html>

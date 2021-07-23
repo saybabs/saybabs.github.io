@@ -2,15 +2,91 @@
 .name{
     color: blue;
     font-style:italic;
+    
 }
 
 .mood {
     height: 30%;
     width: 30%;
     float: left;
+    background-image:image-set('');
   }
 
   .row:after {
     display: table;
     }
 
+    .divHeader {
+      background-color: darkturquoise;
+      font-size: 20pt;
+      justify-content: center;
+      font-weight: bold;
+      padding: 20px;
+      height: 100px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .divFooter {
+    background-color: darkslategrey;
+    color: white;
+    justify-content: center;
+    padding: 20px;
+    height: 100px;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+  .menuitem {
+      color: white;
+      background-color: darkslategrey;
+      flex-wrap: wrap;
+      display: flex;
+  }
+  
+  .menuitem div {
+      border-right: 1.5px solid black;
+      padding: 10px;
+  }
+  
+  .columns {
+      display: flex;
+      height: 450px;
+      padding: 0px;
+      padding-right: 0px;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* .columns div {
+      
+  } */
+  
+  .divColumn1 {
+      background-color: gray;
+  }
+  
+  .divColumn2 {
+      background-color: darkgray;
+  }
+  
+  .divColumn3 {
+      background-color: lightgrey;
+  }
+  
+  @media (max-width: 599px) {
+      .columns {
+          flex-wrap: wrap;
+      }
+      .divColumn1 {
+          flex: 40%;
+      }
+  
+      .divColumn3 {
+          flex: 40%;
+      }
+      
+      .divColumn2{
+          order: 3;
+      }
+  }
