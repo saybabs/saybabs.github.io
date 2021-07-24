@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,7 +6,89 @@
     <title>Home</title>
 </head>
 <body>
-    <div id=”first”></div>
-    <div id=”second”></div>
-  </body>
+    <div>
+        <fieldset>
+          <legend>Party Info </legend>
+          <div>
+            <div class="row">
+              <div class="col-sm-3">
+                First Name:
+              </div>
+              <div class="col-md-3">
+                <input type="text" name="txtFirstName" id="txtFirstName" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                Last Name:
+              </div>
+              <div class="col-md-3">
+                <input type="text" name="txtLastName"  id="txtLastName" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                Favourite Food:
+              </div>
+              <div class="col-md-3">
+                <select name="ddlFood" id="ddlFood">
+                  <option value="Pizza">Pizza</option>
+                  <option value="Ice Cream">Ice Cream</option>
+                  <option value="Burger and Fries">Burger and Fries</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+    </div>
+
+    <div id="a">Text for a
+      <div id="b">Text for b
+          <div id="c">Text for c</div>
+      </div>
+      <div id="d">Text for d</div>
+  </div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>W1D5 Q1</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: 120px 200px;
+            grid-gap: 5px;
+            max-width: 400px;;
+        }
+        .label {
+            padding-top: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset id="container">
+            <legend>Party Info</legend>
+            <div class="label">First Name:</div>
+            <div><input type="text" name="first" /></div>
+            <div class="label">Last Name:</div>
+            <div><input type="text" name="last" /></div>
+            <div class="label">Favorite Food:</div>
+            <div>
+                <select name="food">
+                    <option>Pizza</option>
+                    <option>Ice Cream</option>
+                    <option>Burger and Fries</option>
+                </select>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
 </html>

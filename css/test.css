@@ -14,3 +14,8 @@
     border: 1px solid green;
     background-color: #F3F3FF;
 }
+
+div { border: 1px solid black; }
+#a { position: relative; width: 1000px; height: 500px;}
+#b { position: absolute; bottom: 0px; left: 0px; right: 0px;}
+#c { position: absolute; right: 0px; }
