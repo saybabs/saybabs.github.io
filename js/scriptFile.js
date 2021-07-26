@@ -199,3 +199,22 @@ function myFunctionTest(expected, found) {
   }
   console.log("Expected output for productOdAllElements[1,3,5,3,3] is 135 " + myFunctionTest(135, productOdAllElements([1,3,5,3,3])));
   console.assert(productOdAllElements([1,3,5,3,3]) === 135, "Test assertion failed for productOdAllElements([1,3,5,3,3])");
+
+
+  function shortest(string1, string2, string3){
+     return least(least(string1, string2), string3);
+  }
+
+
+    //helper function
+    function least(first, second){
+    if(first.length < second.length){
+        return first;
+    }
+    else
+    {
+        return second;
+    }
+}
+
+console.log("Expected output for shortest(['John', 'Bryan', 'McManamman']) is z " + myFunctionTest("z", shortest("hello", "z", "bye")));
