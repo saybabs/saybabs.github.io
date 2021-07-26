@@ -7,12 +7,13 @@ window.onload = function(){
     let ddlAnimations = document.getElementById("animation");
     let ddlSizeOfFont = document.getElementById("fontsize");
 
-    let timer = null; 
-    let frame1;
+    
+    let run;
     let frame2 = 0;
     let frame3;
-    let turbo = 250;
-    let running;
+    let turbo = 100;
+    let timer = null; 
+    let frame1;
 
     btnStart.onclick = start;
     btnStop.onclick = stop;
@@ -22,7 +23,7 @@ window.onload = function(){
 
     //starting the animations
     function start() {
-        running = true;
+        run = true;
         btnStop.disabled = false;
         btnStart.disabled = true;
         txtArea.disabled = true;
@@ -46,7 +47,7 @@ window.onload = function(){
 
         txtArea.value = frame3;
         frame3 = frame2;
-        running = false;
+        run = false;
         clearInterval(timer);
         timer = null;
     }
@@ -75,25 +76,24 @@ window.onload = function(){
     }
 
     function speed(){
-        if(running){
+        if(run){
             if (cbTurbo.checked == true) {
                 clearInterval(timer);
                 turbo = 50;
                 timer = setInterval(showNextFrame, turbo);
             } else {
                 clearInterval(timer);
-                turbo = 250;
+                turbo = 100;
                 timer = setInterval(showNextFrame, turbo);
             }
         }
     }
 
-    //speed status
     function speedCheck(){
         if (cbTurbo.checked == true) {
             turbo = 50;
         } else {
-            turbo = 250;
+            turbo = 100;
         }
     }
 
