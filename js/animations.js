@@ -642,7 +642,7 @@ var DIVE = "  o\n" +
 // such as ANIMATIONS["Bike"] or ANIMATIONS["Dive"]
 var ANIMATIONS = [];
 // ANIMATIONS["Blank"] = ANIMATIONS["blank"] = ANIMATIONS["BLANK"] = "";
-ANIMATIONS.BLANK = "";
+ANIMATIONS.BLANK = BLANK;
 // ANIMATIONS["Custom"] = ANIMATIONS["custom"] = ANIMATIONS["CUSTOM"] = CUSTOM;   // you could change the value of this in your code
 ANIMATIONS.CUSTOM = CUSTOM;
 // ANIMATIONS["Exercise"] = ANIMATIONS["exercise"] = ANIMATIONS["EXERCISE"] = EXERCISE;
