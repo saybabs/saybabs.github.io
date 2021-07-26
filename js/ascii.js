@@ -1,5 +1,5 @@
 window.onload = function(){
-    
+    "use strict";
     let btnStart = document.getElementById("start");
     let btnStop = document.getElementById("stop");
     let txtArea = document.getElementById("text-area");
