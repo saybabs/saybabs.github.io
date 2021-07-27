@@ -20,5 +20,5 @@ function reverse(word){
 //Q7
 function filterLongWords(arrayOfWord, size){
     var result = arrayOfWord.filter(x => x.length > size);
-    return result;
+    return JSON.stringify(result);
 }
