@@ -85,3 +85,7 @@
           order: 3;
       }
   }
+
+  input [type=text]{
+    font-family: monospace;
+  }

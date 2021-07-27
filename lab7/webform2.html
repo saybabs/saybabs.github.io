@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Web Form 2</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm  bg-primary navbar-dark">
+        <a class="navbar-brand" style="color: white;"> MIU Golden Dome Market ::: SRM System </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link">Products</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link">Suppliers</a>
+                </li>
+            </ul>
+        </div>
+        <span class="navbar-text">Hello! </span>
+        <button class="btn btn-default" type="button">Sign Out</button>
+    </nav><br />
+
+    <div class="container">
+        <div>
+            <h2>New Product Form</h2>
+            <form action="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Product Number</label>
+                        <input type="text" class="form-control" id="txtPhoneNumber" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Quantity in Stock</label>
+                        <input type="number" class="form-control" id="txtQuantity" value="0" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Name</label>
+                        <input type="text" class="form-control" id="txtName" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Supplier</label>
+                        <select id="ddlSupplier" class="form-control" required>
+                            <option selected value="">Select a supplier</option>
+                            <option value="">Walmart</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Unit Price</label>
+                        <input class="form-control" type="number" min="0.00" max="9999999.99" step="1000" id="txtPrice" value="0.0" required/>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Date supplied</label>
+                        <input type="date" class="form-control" id="txtDate" required />
+                        <span>Enter a valid Date.</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-8"></div>
+                    <div class="form-group col-md-4" style="text-align: right;">
+                        <button type="reset" id="btnReset" class="btn btn-outline-info" style="margin-right: 10%;">Reset</button>
+                        <button type="button" id="btnCancel" class="btn btn-outline-danger" style="margin-right: 10%;">Cancel</button>
+                        <button type="submit"  id="btnAdd" class="btn btn-outline-primary" style="text-align: right;">Add Product</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Web Form 1</title> 
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-sm-12">
+            <form action="post">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" id="txtEmailAddress"  placeholder="Enter valid email address" required>
+                    <span>We'll never share you email with anyone else.</span>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="txtPassword" placeholder="Enter password" name="pwd" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}" 
+                        required title="Password must have at least 10 characters and contains number, uppercase and lowercase letters">
+                </div>
+                <div>
+                    <label><input type="checkbox" id="cbCheckMe"> Check me out</label>
+                </div><br />
+                <div class="form-group">
+                    <label>Web URL</label>
+                    <input type="url" id="txtURL" class="form-control" pattern="https?://.+" title="URL must start with http" placeholder="Enter web URL" required/>
+                </div>
+                <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
