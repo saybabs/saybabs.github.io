@@ -7,7 +7,7 @@ function sum(arrayOfNumber){
 
 //Q4b
 function multiply(arrayOfNumber){
-    var result = arrayOfNumber.reduce((a, b) => a * b, 0);
+    var result = arrayOfNumber.reduce((a, b) => a * b);
     return result;
 }
 
