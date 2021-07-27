@@ -18,7 +18,7 @@ function reverse(word){
 }
 
 //Q7
-function filterWord(arrayOfWord, size){
+function filterLongWords(arrayOfWord, size){
     var result = arrayOfWord.filter(x => x.length > size);
     return result;
 }

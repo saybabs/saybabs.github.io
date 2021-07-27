@@ -22,9 +22,9 @@ describe("reverse", function () {
         });
 });
 
-describe("filterWord", function () {
+describe("filterLongWords", function () {
     it("Print words that has length more than the integer specified",
         function () {
-            assert.equal(JSON.stringify(["Johnny", "Johnson"]), filterWord(JSON.stringify(["John", "Johnny", "Johnson"]), 4));
+            assert.equal(JSON.stringify(["Johnny", "Johnson"]), filterLongWords(["John", "Johnny", "Johnson"], 4));
         });
 });
