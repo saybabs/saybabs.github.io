@@ -218,3 +218,11 @@ function myFunctionTest(expected, found) {
 }
 
 console.log("Expected output for shortest(['John', 'Bryan', 'McManamman']) is z " + myFunctionTest("z", shortest("hello", "z", "bye")));
+
+
+var x = 9;
+function abc(){
+    var i = x + x;
+    console.log(i)
+}
+console.log("Expected output for productOdAllElements[1,3,5,3,3] is 135 " + abc(18, abc()));
