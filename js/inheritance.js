@@ -1,30 +1,27 @@
-//window.onload = function(){
 
-    //"use strict";
 
-    // function filter(){
-    //     word: 
-    // }
-
-    function filter(...bannedWords) {
-        //return this.toString().replace(new RegExp(bannedWords.join("|"), "gi"),'').replace(/\s+/g,' ').trim();
+    //Q1
+    String.prototype.filter = function ([...args]) {
+        return this.split(" ")
+        .filter(word => args.indexOf(word) === -1)
+        .join(" ");
     }
 
 
 
     //Q2
-    function bubbleSort(arr){
+    Array.prototype.bubbleSort = function(){
         var i, j;
-        var length = arr.length;
+        var length = this.length;
         var isSwapped = false;
           
         for(i =0; i < length; i++){
           isSwapped = false;
           for(j = 0; j < length; j++){
-              if(arr[j] > arr[j + 1]){
-                var temp = arr[j]
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+              if(this[j] > this[j + 1]){
+                var temp = this[j]
+                this[j] = this[j+1];
+                this[j+1] = temp;
                 isSwapped = true;
               }
           }
@@ -32,7 +29,7 @@
             break;
           }
         }
-        return JSON.stringify(arr);
+        return this;
       }
 
 
@@ -79,6 +76,3 @@
     
 
 
-
-
-//}
