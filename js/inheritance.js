@@ -6,8 +6,34 @@
     //     word: 
     // }
 
+    function filter(...bannedWords) {
+        //return this.toString().replace(new RegExp(bannedWords.join("|"), "gi"),'').replace(/\s+/g,' ').trim();
+    }
 
 
+
+    //Q2
+    function bubbleSort(arr){
+        var i, j;
+        var length = arr.length;
+        var isSwapped = false;
+          
+        for(i =0; i < length; i++){
+          isSwapped = false;
+          for(j = 0; j < length; j++){
+              if(arr[j] > arr[j + 1]){
+                var temp = arr[j]
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                isSwapped = true;
+              }
+          }
+          if(!isSwapped){
+            break;
+          }
+        }
+        return JSON.stringify(arr);
+      }
 
 
 
@@ -36,12 +62,6 @@
 
         var me = new Student();
 
-        // function Teacher(course){
-        //     this.course = course;
-        //     teach: function teach(course){
-        //         return this.course;
-        //     }
-        // }
 
         var Teacher = function() {};
         Teacher.prototype = new Person();
