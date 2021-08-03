@@ -5,14 +5,14 @@
         });
 
         describe("getNumber", function () {
-            it("returns accounts number", function () {
+            it("This shows account numbers", function () {
                     assert.equal(account.getNumber(), 001122);
                 });
         });
 
         describe("getBalance", function () {
-            it("returns accounts balance", function () {
-                    assert.equal(this.getBalance(), 0);
+            it("This shows confirms balance of account", function () {
+                    assert.equal(account.getBalance(), 0);
             });
         });
 
@@ -24,10 +24,10 @@
                 });
             });
 
-            describe("when the given amount is less than 0", function() {
+            describe("deposit amount < 0", function() {
                 it("throws an RangeError",
                 function () {
-                    assert.throws(() => {account.deposit(-12)}, RangeError, "Deposit amount has to be greater than zero");
+                    assert.throws(() => {account.deposit(-150)}, RangeError, "Deposit amount has to be greater than zero");
                 });
             });
         });
@@ -56,7 +56,7 @@
         });
 
         describe("endOfMonth", function () {
-            it("print details of account", function () {
+            it("account detail by end of month", function () {
                 assert.equal(account.endOfMonth(), '');
             });
         });
@@ -76,23 +76,28 @@
         
 
         describe("getInterest", function () {
-            it("returns account interest", function () {
+            it("Savings Account interest", function () {
                 assert.equal(savingsAccount.getInterest(), 0.09);
             });
         });
 
         describe("setInterest", function () {
-            it("sets account interest", function () {
+            it("Interest on savings account", function () {
                 savingsAccount.setInterest(0.15);
                 assert.equal(savingsAccount.getInterest(), 0.15);
             });
         });
 
         describe("addInterest", function () {
-            it("deposits balance interest into account", function () {
+            it("This deposits and adds interest into savings account", function () {
                 savingsAccount.deposit(100);
                 savingsAccount.addInterest()
                 assert.equal(savingsAccount.getBalance(), 100.09);
+            });
+        });
+        describe("toString", function () {
+            it("savings account details", function () {
+                assert.equal(savingsAccount.toString(), `Savings Account ${savingsAccount.getNumber()}: balance ${savingsAccount.getBalance()}: intreset ${savingsAccount.getInterest()}`);
             });
         });
 
@@ -104,11 +109,7 @@
         //     });
         // });
 
-        describe("toString", function () {
-            it("print savings account details", function () {
-                assert.equal(savingsAccount.toString(), `Savings Account ${savingsAccount.getNumber()}: balance ${savingsAccount.getBalance()}: intreset ${savingsAccount.getInterest()}`);
-            });
-        });
+        
     });
 
     // describe("CheckingAccount", function() {
