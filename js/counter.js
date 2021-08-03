@@ -100,3 +100,27 @@ var me = {
   console.log(me.getFullName.apply(you)); 
   console.log(me.getFullName.call(you)); 
   console.log(theName.bind(this, you)); 
+
+
+
+  class Computer {
+    constructor(ram, cpu, storage) {
+      this.ram = ram;
+      this.cpu = cpu;
+      this.storage = storage;
+    }
+  }
+
+  Computer.prototype.runProgram = function(program){
+    console.log("running "+ program);
+  }
+
+  class Laptop {
+    constructor(battery){
+        this.battery = this.battery;
+    }
+  };
+  Laptop.prototype = new Computer();
+  Laptop.prototype.carryAround = function(){
+      console.log("carrying laptop:  cpu" + this.cpu +" ram: " + this.ram + " storage: " + this.storage + " battery: " + this.battery)
+  }
