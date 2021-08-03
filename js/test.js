@@ -1,18 +1,18 @@
 (function() {
     describe("Account", function() {
         beforeEach(() => {
-            account = new Account(54321);
+            account = new Account(001122);
         });
 
         describe("getNumber", function () {
             it("returns accounts number", function () {
-                    assert.equal(account.getNumber(), 54321);
+                    assert.equal(account.getNumber(), 001122);
                 });
         });
 
         describe("getBalance", function () {
             it("returns accounts balance", function () {
-                    assert.equal(account.getBalance(), 0);
+                    assert.equal(this.getBalance(), 0);
             });
         });
 
@@ -70,7 +70,15 @@
 
     describe("SavingsAccount", function() {
         beforeEach(() => {
-            savingsAccount = new SavingsAccount(0.09, 54321);
+            savingsAccount = new SavingsAccount(0.09, 001122);
+        });
+
+        
+
+        describe("getInterest", function () {
+            it("returns account interest", function () {
+                assert.equal(savingsAccount.getInterest(), 0.09);
+            });
         });
 
         describe("setInterest", function () {
@@ -88,19 +96,13 @@
             });
         });
 
-        describe("getInterest", function () {
-            it("returns account interest", function () {
-                assert.equal(savingsAccount.getInterest(), 0.09);
-            });
-        });
-
-        describe("endOfMonth", function () {
-            it("print details of savings account", function () {
-                savingsAccount.deposit(100);
-                savingsAccount.addInterest()
-                assert.equal(savingsAccount.endOfMonth(), 'Interest added SavingsAccount 54321: balance: 100.180081 interest: 0.09');
-            });
-        });
+        // describe("endOfMonth", function () {
+        //     it("print details of savings account", function () {
+        //         savingsAccount.deposit(100);
+        //         savingsAccount.addInterest()
+        //         assert.equal(savingsAccount.endOfMonth(), 'Interest added SavingsAccount 001122: balance: 100.180081 interest: 0.09');
+        //     });
+        // });
 
         describe("toString", function () {
             it("print savings account details", function () {
@@ -109,103 +111,103 @@
         });
     });
 
-    describe("CheckingAccount", function() {
-        beforeEach(() => {
-            checkingAccount = new CheckingAccount(1000, 54321);
-        });
+    // describe("CheckingAccount", function() {
+    //     beforeEach(() => {
+    //         checkingAccount = new CheckingAccount(1000, 001122);
+    //     });
 
-        describe("setOverdraftLimit", function () {
-            it("sets account overdraftLimit", function () {
-                checkingAccount.setOverdraftLimit(500);
-                assert.equal(checkingAccount.getOverdraftLimit(), 500);
-            });
-        });
+    //     describe("setOverdraftLimit", function () {
+    //         it("sets account overdraftLimit", function () {
+    //             checkingAccount.setOverdraftLimit(500);
+    //             assert.equal(checkingAccount.getOverdraftLimit(), 500);
+    //         });
+    //     });
 
-        describe("getOverdraftLimit", function () {
-            it("returns account overdraftLimit", function () {
-                assert.equal(checkingAccount.getOverdraftLimit(), 1000);
-            });
-        });
+    //     describe("getOverdraftLimit", function () {
+    //         it("returns account overdraftLimit", function () {
+    //             assert.equal(checkingAccount.getOverdraftLimit(), 1000);
+    //         });
+    //     });
 
-        describe("withdraw", function () {
-            describe("when the given amount is more than the balance", function() {
-                it("throws Error with Withdraw amount has to be greater than zero", function () {
-                    assert.throws(() => {checkingAccount.withdraw(-1)}, Error, "Withdraw amount has to be greater than zero");
-                });
-            });
+    //     describe("withdraw", function () {
+    //         describe("when the given amount is more than the balance", function() {
+    //             it("throws Error with Withdraw amount has to be greater than zero", function () {
+    //                 assert.throws(() => {checkingAccount.withdraw(-1)}, Error, "Withdraw amount has to be greater than zero");
+    //             });
+    //         });
 
-            describe("when the given amount is less than or equal 0", function() {
-                it("throws Error with Over the draft limit", function () {
-                    checkingAccount.deposit(100);
-                    assert.throws(() => {checkingAccount.withdraw(1101)}, Error, "Over the draft limit");
-                });
-            });
+    //         describe("when the given amount is less than or equal 0", function() {
+    //             it("throws Error with Over the draft limit", function () {
+    //                 checkingAccount.deposit(100);
+    //                 assert.throws(() => {checkingAccount.withdraw(1101)}, Error, "Over the draft limit");
+    //             });
+    //         });
 
-            describe("when the given amount is valid", function() {
-                it("decrement account balance by given amount", function () {
-                    checkingAccount.deposit(120);
-                    checkingAccount.withdraw(100);
-                    assert.equal(checkingAccount.getBalance(), 20);
-                });
-            });
-        });
+    //         describe("when the given amount is valid", function() {
+    //             it("decrement account balance by given amount", function () {
+    //                 checkingAccount.deposit(120);
+    //                 checkingAccount.withdraw(100);
+    //                 assert.equal(checkingAccount.getBalance(), 20);
+    //             });
+    //         });
+    //     });
 
-        describe("endOfMonth", function () {
-            describe("when the balance is below zero", function() {
-                it("print warning details of checking account", function () {
-                    checkingAccount.deposit(120);
-                    checkingAccount.withdraw(300);
-                    assert.equal(checkingAccount.endOfMonth(), 'Warning, low balance CheckingAccount 54321: balance: -180 overdraft limit: 1000');
-                });
-            });
+    //     describe("endOfMonth", function () {
+    //         describe("when the balance is below zero", function() {
+    //             it("print warning details of checking account", function () {
+    //                 checkingAccount.deposit(120);
+    //                 checkingAccount.withdraw(300);
+    //                 assert.equal(checkingAccount.endOfMonth(), 'Warning, low balance CheckingAccount 001122: balance: -180 overdraft limit: 1000');
+    //             });
+    //         });
 
-            describe("when the balance is above zero", function() {
-                it("print details of checking account", function () {
-                    assert.equal(checkingAccount.endOfMonth(), '');
-                });
-            })
+    //         describe("when the balance is above zero", function() {
+    //             it("print details of checking account", function () {
+    //                 assert.equal(checkingAccount.endOfMonth(), '');
+    //             });
+    //         })
 
 
-        });
+    //     });
 
-        describe("toString", function () {
-            it("print checking account details", function () {
-                assert.equal(checkingAccount.toString(), `Checking Account ${checkingAccount.getNumber()}: balance ${checkingAccount.getBalance()}: overdraft limit ${checkingAccount.getOverdraftLimit()}`);
-            });
-        });
-    });
+    //     describe("toString", function () {
+    //         it("print checking account details", function () {
+    //             assert.equal(checkingAccount.toString(), `Checking Account ${checkingAccount.getNumber()}: balance ${checkingAccount.getBalance()}: overdraft limit ${checkingAccount.getOverdraftLimit()}`);
+    //         });
+    //     });
+    // });
 
-    describe("Bank", function() {
-        beforeEach(() => {
-            bank = new Bank();
-        });
+    // describe("Bank", function() {
+    //     beforeEach(() => {
+    //         bank = new Bank();
+    //     });
 
-        describe("addAccount", function () {
-            it("adds an account, and returns number of accounts", function () {
-                bank.addAccount(12);
-                assert.equal(bank.addAccount(124), 2);
-            });
-        });
+    //     describe("addAccount", function () {
+    //         it("adds an account, and returns number of accounts", function () {
+    //             bank.addAccount(12);
+    //             assert.equal(bank.addAccount(124), 2);
+    //         });
+    //     });
 
-        describe("addCheckingAccount", function () {
-            it("adds a checking account, and returns number of accounts", function () {
-                assert.equal(bank.addCheckingAccount(1000, 123), 1);
-            });
-        });
+    //     describe("addCheckingAccount", function () {
+    //         it("adds a checking account, and returns number of accounts", function () {
+    //             assert.equal(bank.addCheckingAccount(1000, 123), 1);
+    //         });
+    //     });
 
-        describe("addSavingsAccount", function () {
-            it("adds a savings account, and returns number of accounts", function () {
-                assert.equal(bank.addSavingsAccount(0.02, 1243), 1);
-            });
-        });
+    //     describe("addSavingsAccount", function () {
+    //         it("adds a savings account, and returns number of accounts", function () {
+    //             assert.equal(bank.addSavingsAccount(0.02, 1243), 1);
+    //         });
+    //     });
 
-        describe("accountReport", function () {
-            it("print details of each existing account", function () {
-                bank.addCheckingAccount(1000, 123);
-                bank.addAccount(124);
-                bank.addSavingsAccount(0.02, 1243);
-                assert.equal(bank.accountReport(), "Checking Account 123: balance 0: overdraft limit 1000\nAccount 124: balance 0\nSavings Account 1243: balance 0: intreset 0.02");
-            });
-        });
-    });
+    //     describe("accountReport", function () {
+    //         it("print details of each existing account", function () {
+    //             bank.addCheckingAccount(1000, 123);
+    //             bank.addAccount(124);
+    //             bank.addSavingsAccount(0.02, 1243);
+    //             assert.equal(bank.accountReport(), "Checking Account 123: balance 0: overdraft limit 1000\nAccount 124: balance 0\nSavings Account 1243: balance 0: intreset 0.02");
+    //         });
+    //     });
+    // });
 })();
