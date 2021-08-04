@@ -73,3 +73,37 @@ class CheckingAccount extends Account {
         return "Checking Account " + this.getNumber() + ": balance " + this.getBalance() + ": overdraft limit " + this._overdraftLimit;
     }
 }
+
+
+// "use strict";
+
+// class Computer{
+//     constructor(ram, cpu, storage){
+//         this.ram = ram;
+//         this.cpu = cpu;
+//         this.storage = storage;
+//     }
+
+//     runProgram(program){
+//         console.log(`running ${program}`);
+//     }
+// }
+
+// class Laptop extends Computer{
+//     constructor(battery, ram, cpu, storage){
+//         super(ram, cpu, storage);
+//         this._battery = this.battery;
+//     }
+
+//     getBattery(){
+//         return this._battery;
+//     }
+
+//     carryAround(){
+//         console.log(`carrying laptop:  cpu: ${this.cpu},  ram: ${this.ram}, storage: ${this.storage}, battery: ${this._battery}`);
+//     }
+// }
+
+// var laptop = new Laptop("14Hrs", "16GB", "3.2GHz", "512GB SSD");
+// laptop.runProgram("Microsoft Word");
+// laptop.carryAround();

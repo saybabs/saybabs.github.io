@@ -1,0 +1,31 @@
+.circles {
+    position: relative;
+    width: 40%;
+    left: 10%;
+}
+
+.circle {
+    position: absolute;
+    left: 30%;
+    background-color: pink;
+    border-radius: 100%;
+    opacity: 1.0;
+}
+
+label {
+    margin: 10px;
+    display: inline-grid;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 210px;
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+    margin: 10px;
+}
