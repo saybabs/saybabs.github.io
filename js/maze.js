@@ -17,10 +17,10 @@ $(function() {
 
         $("#end").mouseover(function(event) {
             if(result) {
-                $("#status").text("You lost the game").addClass("lose");
+                $("#status").text("You lost the game, click S to restart").addClass("lose");
                 $("#status").removeClass("win");
             } else {
-                $("#status").text("You won the game!").addClass("win");
+                $("#status").text("You won the game!, click S to restart").addClass("win");
                 $("#status").removeClass("lose");
             }
         });
@@ -28,7 +28,7 @@ $(function() {
         $("#maze").mouseleave(function() {
             result = true;
             $(".boundary").addClass("youlose");
-            $("#status").text("You lost the game").addClass("lose");
+            $("#status").text("You lost the game, click S to restart").addClass("lose");
             $("#status").removeClass("win");
         });
     };
