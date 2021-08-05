@@ -53,6 +53,14 @@ div.youlose {
     background-color: #ff8888;
 }
 
+.lose{
+    color: red;
+}
+
+.win{
+    color: green;
+}
+
 /*
 Hack hack hack; these are CSS "sibling selectors" for selecting
 neighboring elements.  Necessary to avoid giving ids to the boundary divs
