@@ -7,7 +7,7 @@ $(function() {
 
     function start() {
         let result = false;
-        cleanStart();
+        clear();
 
         $(".boundary").mouseover(function() {
             result = true;
@@ -33,7 +33,7 @@ $(function() {
         });
     };
 
-    function cleanStart() {
+    function clear() {
         $(".boundary").removeClass("youlose");
         $("#end").off("mouseover");
         $("#status").text(`Click S to begin.`).addClass("lose");
