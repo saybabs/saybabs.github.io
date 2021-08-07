@@ -22,3 +22,12 @@ function filterLongWords(arrayOfWord, size){
     var result = arrayOfWord.filter(x => x.length > size);
     return JSON.stringify(result);
 }
+
+
+function longestNoSpace(...args){
+    return args.filter(a => a.length > countWords(args));
+}
+
+function countWords(word){
+    return word.split(' ').length;
+}
