@@ -13,3 +13,27 @@
     </form>
  </body>
 </html>
+
+
+
+
+//items.ejs
+<h4><%= item %></h4>
+
+
+
+<!DOCTYPE html>
+<html lang='en'>
+ <head>
+ <meta charset="utf-8">
+ <title></title>
+ </head>
+
+ <body>
+     <%- include("items.ejs") %>
+     <form action="/add" method="POST">
+         <input type="text" value="<%= item %>" name="item"></hidden>
+        <button type="submit">Submit</button>
+    </form>
+ </body>
+</html>
